@@ -1,0 +1,172 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Martel:wght@200&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300&family=Slabo+27px&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: rgb(0, 225, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 550px;
+    height: 375px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .5);
+}
+.imagePlayer{
+    width: 100%;
+    height: 70%;
+    background-image: url("https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/tim_minchin_piano.jpg");
+}
+.titleInformation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    padding: 30px;
+}
+.titleInformation h2{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+.titleInformation h3{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    font-family: 'Martel', serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    height: 24px;
+}
+.groupButtons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: blue;
+    /* visibility: hidden; */
+}
+
+.stopPlay{
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.play{
+    font-size: 3em;
+    color: black;
+    
+}
+
+
+/* Parte de dentro do input range */
+.progressMusicClass{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 220px;
+    align-self: center;
+    height: 3px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+/* Começo bolinha do range */
+.progressMusicClass::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #00c3ff;
+    cursor: pointer;
+}
+
+.progressMusicClass::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #00c3ff;
+    cursor: pointer;
+}
+
+.volumeIcon{
+    align-self: center;
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+.volMusic{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 3px;
+    align-self: center;
+}
+/* Começo bolinha do range */
+.volMusic::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #00c3ff;
+    cursor: pointer;
+}
+
+.volMusic::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #00c3ff;
+    cursor: pointer;
+}
+.close{
+    border: none;
+    background: none;
+}
+.closeIcon{
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 10px;
+}
+
+@media(max-width: 600px){
+    .content{
+        width: 450px;
+    }
+
+    .groupButtons{
+        padding: 25px;
+    }
+
+    .stopPlay{
+        height: 70px;
+        width: 70px;
+        border-radius: 45px;
+    }
+
+    .progressMusicClass{
+        width: 170px;
+    }
+}
