@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', start, false)
 
 function start(){
     document.querySelector('.stopPlay').addEventListener('click', startSong)
+    document.querySelector('#sound').addEventListener('timeupdate', currentTimeOfSong)
+
 }
 
-function startSong(e){
-    e.preventDefault()
+function startSong(){
 
     const song = document.querySelector('#sound')
     const buttonPlayStop = document.querySelector('stopPlay')
@@ -22,6 +23,7 @@ function startSong(e){
         i.classList.add('bi-pause-fill')
         
         song.play()
+
         playSong = false
     }else{
         i.classList.remove('bi')
@@ -33,4 +35,12 @@ function startSong(e){
         playSong = true
         
     }
+}
+
+function currentTimeOfSong(e){
+    const rangeTimeElement = document.querySelector('.progressMusicClass')
+    const timeOfSongWithNumbers = document.querySelector('.timeOfSong')
+    
+    rangeTimeElement.value = e.target.currentTime
+    timeOfSongWithNumbers.innerHTML = `${((e.target.currentTime / 60) % 60).toFixed(2) } / 4:53` 
 }
