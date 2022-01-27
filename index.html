@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +10,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Player Music</title>
 </head>
+
 <body>
-    
-    <div class="content">
-        <audio id="sound">
-            <source src="music/Oasis.mp3"/>
-        </audio>
-        <div class="imagePlayer">
-            <div class="titleInformation">
-                <h2>Stop Crying Your Heart Out </h2>
-                <h3>Oasis</h3>
-                <h3 class="timeOfSong">0:0/4:53</h3>
+    <main>
+        <article>
+            <div class="content">
+                <audio id="sound">
+                    <source src="music/Oasis.mp3" />
+                </audio>
+                <div class="imagePlayer">
+                    <div class="titleInformation">
+                        <h2>Stop Crying Your Heart Out </h2>
+                        <h3>Oasis</h3>
+                        <h3 class="timeOfSong">0:0/4:53</h3>
+                    </div>
+                </div>
+                <div class="groupButtons">
+                    <button class="stopPlay"><i id="playStop" class="bi bi-play-fill play"></i></button>
+                    <input type="range" class="progressMusicClass" value="0">
+                    <i class="bi bi-volume-down-fill volumeIcon"></i><input type="range" class="volMusic" value="100">
+                    <button class="close"><i class="bi bi-x closeIcon"></i></button>
+                    <!-- <i class="bi bi-volume-mute-fill"></i> -->
+                    <!-- <i class="bi bi-pause-fill"></i> -->
+                </div>
             </div>
-        </div>
-        <div class="groupButtons">
-            <button class="stopPlay"><i id="playStop" class="bi bi-play-fill play"></i></button>
-            <input type="range" class="progressMusicClass" value="0">
-            <i class="bi bi-volume-down-fill volumeIcon"></i><input type="range" class="volMusic" value="100">
-            <button class="close"><i class="bi bi-x closeIcon"></i></button>
-            <!-- <i class="bi bi-volume-mute-fill"></i> -->
-            <!-- <i class="bi bi-pause-fill"></i> -->
-        </div>
-    </div>
-<script src="js/main.js"></script> 
+        </article>
+    </main>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
