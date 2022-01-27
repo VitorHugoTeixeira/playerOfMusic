@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', start, false)
 
 function start(){
     document.querySelector('.stopPlay').addEventListener('click', startSong)
+    document.querySelector('.progressMusicClass').addEventListener('input', changeProgressMusic)
     document.querySelector('#sound').addEventListener('timeupdate', currentTimeOfSong)
 
 }
 
-function startSong(){
+function startSong(e){
 
     const song = document.querySelector('#sound')
     const buttonPlayStop = document.querySelector('stopPlay')
@@ -40,7 +41,23 @@ function startSong(){
 function currentTimeOfSong(e){
     const rangeTimeElement = document.querySelector('.progressMusicClass')
     const timeOfSongWithNumbers = document.querySelector('.timeOfSong')
-    
+    const currentTime = e.target.currentTime
+
     rangeTimeElement.value = e.target.currentTime
-    timeOfSongWithNumbers.innerHTML = `${((e.target.currentTime / 60) % 60).toFixed(2) } / 4:53` 
+
+    let min = parseInt((currentTime / 60) % 60)
+    let seg = parseInt((currentTime) % 60)
+
+    timeOfSongWithNumbers.innerHTML = `${min}:${seg}/ 4:53` 
+}
+
+function changeProgressMusic(){
+    const song = document.querySelector('#sound')  
+    const inputRangeProgress = document.querySelector('.progressMusicClass')
+
+    if(playSong){
+        startSong()
+        song.currentTime = inputRangeProgress.value
+    }
+    else song.currentTime = inputRangeProgress.value
 }
