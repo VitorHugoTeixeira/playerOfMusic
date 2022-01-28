@@ -4,6 +4,7 @@
 
 *{
     box-sizing: border-box;
+    transition: 0.4s;
 }
 html{
     height: 100%;
@@ -39,6 +40,7 @@ body{
     align-items: flex-end;
     color: #fff;
     padding: 30px;
+    visibility: hidden;
 }
 .titleInformation h2{
     margin: 0px;
@@ -59,10 +61,9 @@ body{
 .groupButtons{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     padding: 30px;
-    background-color: blue;
-    /* visibility: hidden; */
+    background: #fff;
 }
 
 .stopPlay{
@@ -71,11 +72,12 @@ body{
     border: none;
     border-radius: 50px;
     margin-right: 10px;
+    display: none;
 }
 .play{
     font-size: 3em;
     color: black;
-    
+    display: none;
 }
 
 
@@ -89,6 +91,7 @@ body{
     border-radius: 30px;
     background-color: #fff;
     margin: 5px;
+    display: none;
 }
 
 /* Começo bolinha do range */
@@ -114,6 +117,7 @@ body{
     align-self: center;
     font-size: 1.1em;
     margin-left: 10px;
+    display: none;
 }
 .volMusic{
     -webkit-appearance: none;
@@ -121,6 +125,7 @@ body{
     width: 70px;
     height: 3px;
     align-self: center;
+    display: none;
 }
 /* Começo bolinha do range */
 .volMusic::-webkit-slider-thumb {
@@ -140,15 +145,54 @@ body{
     background: #00c3ff;
     cursor: pointer;
 }
+.change{
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 10px;
+    background-color: blue;
+}
+.changeIcon{
+    font-size: 3em;
+    color: #fff;
+}
+
 .close{
     border: none;
     background: none;
 }
+
 .closeIcon{
     font-size: 3em;
     font-weight: bold;
     color: #fff;
     padding-left: 10px;
+}
+
+.titleHidden{
+    display: block;
+    flex-grow: 1;
+    width: 300px;
+    height: 100px;
+}
+
+.titleHidden h2{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.titleHidden h3{
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    font-family: 'Martel', serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    height: 24px;
 }
 
 @media(max-width: 600px){
